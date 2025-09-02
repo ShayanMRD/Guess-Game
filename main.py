@@ -40,8 +40,8 @@ def game_restart():
     secret_number = random.randint(0,100)
     repeats = 0
     label1.config(text="Game restarted!")
-    guesses_box.config(state="normal")  # باز کن
-    guesses_box.delete("1.0", tk.END)   # پاک کن
+    guesses_box.config(state="normal") 
+    guesses_box.delete("1.0", tk.END)   
     guesses_box.insert(tk.END, "Guesses: \n")
     guesses_box.config(state="disabled")
     submit_button.config(state="normal")
@@ -81,5 +81,6 @@ guesses_box.config(state="disabled")
 
 restart_button = tk.Button(game, text="Restart", command=game_restart, bg="lightyellow")
 restart_button.pack()
+
 
 game.mainloop()
